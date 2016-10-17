@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4">
+            {{#each model.artists as |artist|}}
+
+                <div>
+                    {{#link-to 'artists.artist' artist.id}}
+                        {{artist.name}}
+                    {{/link-to}}
+
+                </div>
+            {{/each}}
+
+        </div>
+        <div class="col-xs-8">
+
+            {{outlet}}
+
+            <br>
+            <br>
+            {{#link-to 'artists.new'}}
+            <button class="btn btn-success artistButton">Create Artist</button>
+            {{/link-to}}
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
